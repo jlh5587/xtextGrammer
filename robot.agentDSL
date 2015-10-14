@@ -1,0 +1,48 @@
+typedef String
+typedef Integer
+
+entity Coalition{
+	String name
+	Robot r1
+	Robot r2
+	Task t
+}
+
+entity Robot{
+	Coalition group
+	Point location 
+	Capabilities c
+	Move newLocation
+}
+
+entity Point{
+	Integer x
+	Integer y
+}
+
+entity Capabilities{
+	Integer a
+	Integer b
+}
+
+task Task{
+	String name
+	outcome plan{
+		String toDo
+		
+		goal g{
+			String theGoal
+		}
+	}
+}
+
+function Move{
+	Point start
+	Point to
+}
+
+function formCoaltion{
+	Robot r
+	Robot r1
+	Task t
+}
