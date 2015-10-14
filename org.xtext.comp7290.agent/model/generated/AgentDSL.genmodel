@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.comp7290.agent/src-gen" editDirectory="/org.xtext.comp7290.agent.edit/src"
+    editorDirectory="/org.xtext.comp7290.agent.editor/src" modelPluginID="org.xtext.comp7290.agent"
+    forceOverwrite="true" modelName="AgentDSL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.comp7290.agent.edit"
+    editorPluginID="org.xtext.comp7290.agent.editor" runtimeVersion="2.10">
+  <genPackages prefix="AgentDSL" basePackage="org.xtext.comp7290.agent" disposableProviderFactory="true"
+      fileExtensions="agentdsl" ecorePackage="AgentDSL.ecore#/">
+    <genClasses ecoreClass="AgentDSL.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Model/types"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AgentDSL.ecore#//Type/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//TypeDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//TypeDef/mappedType"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//JAVAID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AgentDSL.ecore#//JAVAID/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Entity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Entity/superEntity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Entity/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Task">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Task/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Task/outcome"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Outcome">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Outcome/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Outcome/goal"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Goal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AgentDSL.ecore#//Goal/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Goal/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Function">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Function/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="AgentDSL.ecore#//Attribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AgentDSL.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AgentDSL.ecore#//Attribute/many"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AgentDSL.ecore#//Attribute/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,47 @@
+grammar org.xtext.comp7290.agent.AgentDSL with org.eclipse.xtext.xbase.Xbase
+
+generate agentDSL "http://www.xtext.org/comp7290/agent/AgentDSL"
+
+Model:
+  (types+=Type)*;
+
+Type:
+  TypeDef | Entity | Task | Outcome;
+
+TypeDef:
+  "typedef" name=ID ("mapsto" mappedType=JAVAID)?;
+
+JAVAID:
+  name=ID("." ID)*;
+
+Entity:
+  "entity" name=ID ("extends" superEntity=[Entity])?
+  "{"
+    (attributes+=Attribute)*
+  "}";
+
+Task:
+	"task" name=ID 
+	"{"
+		(attributes+=Attribute)*
+	"}"
+;
+
+Outcome:
+	"outcome" name=ID
+	"{"
+		goal = Goal
+	"}"
+;
+
+Goal:
+	"goal" name=ID
+	"{"
+		(attributes+=Attribute)*
+	"}"
+;
+
+Attribute:
+  type=[Type] (many?="*")? name=ID;
+
+

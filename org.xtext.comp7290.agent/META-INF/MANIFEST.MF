@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.comp7290.agent
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.comp7290.agent; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.eclipse.xtext.xbase
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.comp7290.agent,
+ org.xtext.comp7290.agent.services,
+ org.xtext.comp7290.agent.agentDSL,
+ org.xtext.comp7290.agent.agentDSL.impl,
+ org.xtext.comp7290.agent.agentDSL.util,
+ org.xtext.comp7290.agent.serializer,
+ org.xtext.comp7290.agent.parser.antlr,
+ org.xtext.comp7290.agent.parser.antlr.internal,
+ org.xtext.comp7290.agent.validation,
+ org.xtext.comp7290.agent.scoping,
+ org.xtext.comp7290.agent.generator,
+ org.xtext.comp7290.agent.formatting,
+ org.xtext.comp7290.agent.jvmmodel
+

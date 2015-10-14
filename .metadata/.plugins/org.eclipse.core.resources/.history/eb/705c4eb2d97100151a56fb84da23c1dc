@@ -1,0 +1,23 @@
+grammar org.xtext.comp7290.agent.AgentDSL with org.eclipse.xtext.common.Terminals
+
+generate agentDSL "http://www.xtext.org/comp7290/agent/AgentDSL"
+
+Model:
+	Agent+=Agent*;
+	
+Agent:
+	'Agent' name=ID (type=Capability)? '{'
+		capabilities += Capability*
+	'}'
+	;
+	
+	
+Capability:
+	type=[Capability]  
+	array?=('[]')?
+	name = ID';'
+;
+	
+	
+	
+

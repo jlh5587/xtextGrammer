@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+/Users/janicecanedo/Documents/workspace_eclipse/xText/.metadata/.plugins/org.eclipse.jdt.core
+584697225.index
+3494649665.index
+1759249077.index

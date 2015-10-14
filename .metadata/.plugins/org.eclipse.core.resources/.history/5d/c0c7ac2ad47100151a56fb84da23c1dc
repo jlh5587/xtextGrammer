@@ -1,0 +1,9 @@
+grammar org.xtext.comp7290.agent.AgentDSL with org.eclipse.xtext.common.Terminals
+
+generate agentDSL "http://www.xtext.org/comp7290/agent/AgentDSL"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
